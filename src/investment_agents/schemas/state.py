@@ -2,26 +2,26 @@ from typing import TypedDict
 
 from investment_agents.schemas.agent_outputs import (
     TechnicalReport,
-    QuantitativeReport,
-    MacroReport,
-    SectorReport,
+    ChipReport,
+    MarketRegimeReport,
     PMReport,
-    ChipReport
 )
 
 
 class InvestmentState(TypedDict, total=False):
+    # Stock identity
     ticker: str
     company_name: str
-    sector_name: str
 
+    # Agent input data
     technical_data: dict
     chip_data: dict
-    macro_data: dict
-    sector_context: dict
+    regime_data: dict
 
+    # Agent outputs
     technical_report: TechnicalReport
     chip_report: ChipReport
-    macro_report: MacroReport
-    sector_report: SectorReport
+    regime_report: MarketRegimeReport
+
+    # Final PM output
     pm_report: PMReport

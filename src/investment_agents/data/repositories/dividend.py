@@ -13,7 +13,7 @@ class DividendRepository:
         end_date: str | None = None,
     ) -> pd.DataFrame:
 
-        df = self.client.get_stock_dividend(
+        df = self.client.get_dividend(
             ticker=ticker,
             start_date=start_date,
             end_date=end_date,

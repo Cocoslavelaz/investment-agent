@@ -7,5 +7,5 @@ load_dotenv()  # Load environment variables from .env file
 def create_llm() -> ChatOpenAI:
     return ChatOpenAI(
         model="gpt-4o",
-        temperature=1.0,
+        temperature=0.0,
     )
